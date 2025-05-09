@@ -34,7 +34,7 @@ jobs:
       - name: Deploying to non-prod
         run: |
           echo "Deploying to non-prod..."
-  e3e-tests:
+  e2e-tests:
     runs-on: ubuntu-latest
     needs:
       - deploy-non-prod
