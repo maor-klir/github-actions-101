@@ -1,7 +1,15 @@
 name: 17 - Custom Actions - Composite
+run-name: "17: 01 - Custom Actions - Composite | Environment: ${{ inputs.target-env }}"
 
 on:
   workflow_dispatch: 
+    inputs:
+      target-env:
+        description: The environment to target for dependency installation
+        type: choice
+        options:
+          - dev
+          - prod
 
 env:
   working-directory: 17-custom-actions/react-app  
@@ -14,11 +22,12 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v4
-      - name: Set up NPM Dependencies
+      - name: Set up Node.js and NPM Dependencies
         uses: ./.github/actions/composite-cache-deps
         with:
           node-version: 22.x
           working-directory: ${{ env.working-directory }}
+          target-env: ${{ inputs.target-env }}
       - name: Test
         run: |
           npm run test
