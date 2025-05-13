@@ -1,5 +1,5 @@
-name: 17 - Custom Actions - JS
-run-name: "17: 02 - Custom Actions - JS"
+name: "17 - 02: Custom Actions - JS"
+run-name: "17 - 02: Custom Actions - JS"
 
 on:
   workflow_dispatch: 
