@@ -23,6 +23,7 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
       - name: Set up Node.js and NPM Dependencies
+        id: setup-deps
         uses: ./.github/actions/composite-cache-deps
         with:
           node-version: 22.x
