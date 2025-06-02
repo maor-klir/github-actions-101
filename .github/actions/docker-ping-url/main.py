@@ -8,6 +8,7 @@ def set_output(file_path, key, value):
 
 def ping_url(url, delay, max_attempts):
     trials = 0
+    
     while trials < max_attempts:
         try:
             response = requests.get(url)
@@ -29,7 +30,7 @@ def run():
    max_attempts = int(os.getenv("INPUT_MAX_ATTEMPTS"))
    website_reachable = ping_url(website_url, delay, max_attempts)
    
-   set_output(os.getenv("GITHUB_OUTPUT"), "url_reachable", website_reachable)
+   set_output(os.getenv('GITHUB_OUTPUT'), "url_reachable", website_reachable)
    
    if not website_reachable:
         raise Exception(f"Website {website_url} is malformed or unreachable.")
