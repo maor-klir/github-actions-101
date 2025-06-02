@@ -16,15 +16,15 @@ const validateDirectoryName = ({ dirName }) =>
 const setupLogger = ({ debug, prefix } = { debug: false, prefix: '' }) => ({
   debug: (message) => {
     if (debug) {
-      code.info(`DEBUG ${prefix}${prefix ? ' : ' : ''}${message}`);
+      core.info(`DEBUG ${prefix}${prefix ? ' : ' : ''}${message}`);
     }
   },
-  info: (message) =>  {
-    code.info(`${prefix}${prefix ? ' : ' : ''}${message}`);
+  info: (message) => {
+    core.info(`${prefix}${prefix ? ' : ' : ''}${message}`);
   },
   error: (message) => {
     core.error(`${prefix}${prefix ? ' : ' : ''}${message}`);
-  }
+  },
 });
 
 async function run() {
