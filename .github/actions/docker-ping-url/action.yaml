@@ -14,6 +14,11 @@ inputs:
     default: '5'
     required: false
 
+outputs:
+  website-reachable:
+    description: Indicates whether the website was reachable within the maximum number of attempts
+    
+
 runs:
   using: docker
   image: Dockerfile
