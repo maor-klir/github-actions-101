@@ -1,0 +1,19 @@
+name: Ping URL
+description: Pings a URL until a maximum number of attempts is reached. If the result is not 200, it will fail the action.
+
+inputs:
+  url:
+    description: The URL to ping
+    required: true
+  max-attempts:
+    description: The maximum number of attempts to ping the URL until the action fails
+    default: '10'
+    required: false
+  delay:
+    description: The delay in seconds between attempts
+    default: '5'
+    required: false
+
+runs:
+  using: docker
+  image: Dockerfile
