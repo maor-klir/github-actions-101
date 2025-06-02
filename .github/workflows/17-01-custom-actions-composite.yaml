@@ -28,6 +28,9 @@ jobs:
           node-version: 22.x
           working-directory: ${{ env.working-directory }}
           target-env: ${{ inputs.target-env }}
+      - name: Print setup deps output
+        run: |
+          echo "Installed dependencies: ${{ steps.setup-deps.outputs.installed-deps }}"          
       - name: Test
         run: |
           npm run test
