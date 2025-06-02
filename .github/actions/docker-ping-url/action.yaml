@@ -15,7 +15,7 @@ inputs:
     required: false
 
 outputs:
-  website-reachable:
+  url-reachable:
     description: Indicates whether the website was reachable within the maximum number of attempts
     
 
