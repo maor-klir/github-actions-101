@@ -61,8 +61,8 @@ async function run() {
 
   if (gitStatus.stdout.length > 0) {
   core.info('[js-dependency-update] : There are updates available!');
-  await exec.exec(`git config --global user.name "maor-klir"`)
-  await exec.exec(`git config --global user-email "maor.klir@gmail.com"`)
+  await exec.exec(`git config --global user.name "maor-klir"`);
+  await exec.exec(`git config --global user-email "maor.klir@gmail.com"`);
   await exec.exec(`git checkout -b ${targetBranch}`, [], {
     ...commonExecOpts,
   });
