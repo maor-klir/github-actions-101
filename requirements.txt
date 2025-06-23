@@ -107,6 +107,6 @@ systemd-python==235
 typer==0.15.1
 typing_extensions==4.12.2
 typst==0.12.3
-urllib3==2.3.0
+urllib3==2.5.0
 watchdog==6.0.0
 xkbregistry==0.3
