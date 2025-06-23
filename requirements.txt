@@ -85,7 +85,7 @@ referencing==0.36.2
 regex==2024.11.6
 rendercv==2.2
 rendercv-fonts==0.4.0
-requests==2.32.3
+requests==2.32.4
 requests-file==2.0.0
 requests-ftp==0.3.1
 rich==14.0.0
